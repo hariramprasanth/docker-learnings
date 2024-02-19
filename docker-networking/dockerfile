@@ -1,0 +1,7 @@
+FROM nginx:latest
+WORKDIR /usr/share/nginx/html/
+RUN touch index.html
+RUN echo "<h1> hello world hari</h1>" >> index.html
+EXPOSE 90
+#only it is use for documentaion, still port 80 can be used to expose during runtime using -p 80:80
+

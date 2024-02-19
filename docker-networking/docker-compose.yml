@@ -1,0 +1,13 @@
+services:
+  nginxn1:
+    image: mynginx
+    container_name: n1
+  nginxn2:
+    image: mynginx
+    container_name: n2
+    networks:
+      - my-network
+networks:
+ my-network:
+   name: my-docker-compose-bridge-network
+   external: true
